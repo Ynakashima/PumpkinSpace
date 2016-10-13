@@ -1,0 +1,8 @@
+<table>
+  <tbody>
+    <tr>
+      <% @entries.all each do |e|
+        <td><%= link_to "#{e.title}", entry_path(e) %></td>
+    </tr>
+  </tbody>
+</table>
