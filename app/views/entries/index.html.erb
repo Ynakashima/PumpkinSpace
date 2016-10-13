@@ -1,8 +1,13 @@
+
+<h2>Pumpkin Posts</h2>
+<h3>by Sunkin</h3>
+<img src="../assets/pumpkin-butt.png" alt="pumpkin butt" />
 <table>
   <tbody>
     <tr>
-      <% @entries.all each do |e|
-        <td><%= link_to "#{e.title}", entry_path(e) %></td>
+      <% @entries.all.each do |e| %>
+        <td> <%= link_to "#{e.title}", entry_path(e) %> </td>
     </tr>
+    <%end%>
   </tbody>
 </table>
