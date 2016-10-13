@@ -1,0 +1,25 @@
+<% if @entry.errors.any? %>
+  <ul class="error">
+    <% @entry.errors.each do |error, message| %>
+    <li><strong><%= error.upcase %></strong><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @entry, url: path, method: http_method do |f| %>
+<table>
+  <tr>
+    <td><%= f.label :title, "Joke Title: " %> </td>
+    <td><%= f.text_field :title, :size => 50 %> </td>
+  </tr>
+
+  <tr>
+    <td><%= f.label :joke, "Joke: " %> </td>
+    <td><%= f.text_field :joke, :size => 150 %> </td>
+  </td>
+
+  <tr>
+    <td><%= f.submit "Pump It, Pumpkin" %></td>
+  </tr>
+</table>
+<% end %>
