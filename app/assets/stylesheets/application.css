@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-image: "/app/assets/images/pumpstar.jpg";
+}
+
+* {
+  margin-left: 4em;
+  margin-right: 4em;
+}
+
+header {
+  background-color: brown;
+  text-align: center;
+}
+
+body {
+  background-color: orange;
+}

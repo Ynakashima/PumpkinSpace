@@ -7,11 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="main-header">
-  <h1><%= link_to "PumpkinSpace", entries_path %></h1>
+  <header class="main-header">
+      <h1><%= link_to "PumpkinSpace", entries_path %></h1>
+  </header>
 
-</div>
-<%= yield %>
+<div><%= yield %></div>
 <footer>&copy PumpkinSpace</footer>
 </body>
 </html>
