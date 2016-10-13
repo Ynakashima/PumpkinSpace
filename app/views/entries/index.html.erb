@@ -1,13 +1,19 @@
 
-<h2>Pumpkin Posts</h2>
-<h3>by Sunkin</h3>
+
+
 <img src="../assets/pumpkin-butt.png" alt="pumpkin butt" />
+<h3>by Sunkin</h3>
+
+<h4>Pumpkin Posts</h4>
 <table>
   <tbody>
     <tr>
       <% @entries.all.each do |e| %>
-        <td> <%= link_to "#{e.title}", entry_path(e) %> </td>
+        <td> Pump-It: <%= link_to "#{e.title}", entry_path(e) %> </td>
     </tr>
     <%end%>
   </tbody>
 </table>
+<p>
+  <%= link_to "New punkin post", new_entry_path %>
+</p>

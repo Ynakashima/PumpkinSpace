@@ -6,13 +6,18 @@ class EntriesController < ApplicationController
   def new
     @entry = Entry.new
   end
-  
+
   def show
     @entry = Entry.find(params[:id])
   end
 
   def create
     @entry = Entry.create(entry_params)
+    if @entry.save
+      redirect_to entries_path, method: :get
+    else
+      render :new
+    end
   end
 
   def edit
